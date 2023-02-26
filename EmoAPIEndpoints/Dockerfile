@@ -1,7 +1,9 @@
 FROM python:3.10
-WORKDIR /emoapiendpoints
-COPY ./requirements.txt ./requirements.txt
-RUN python3 -m pip install --upgrade -r ./requirements.txt
-COPY . ./api/
+
+WORKDIR /APIEndpoints 
+COPY ./requirements.txt /APIEndpoints/requirements.txt
+RUN python3 -m pip install --upgrade -r /APIEndpoints/requirements.txt
+
+COPY . /APIEndpoints/API
 EXPOSE 8000
-CMD [ "uvicorn",  "api.emoapi:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "API.emoapi:app", "--host", "0.0.0.0", "--port", "8000"]

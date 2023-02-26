@@ -1,0 +1,4 @@
+EmoRoBerta API.code-workspace
+EmoAPIEndpoints/__pycache__
+EmoAPIEndpoints/tf_model.h5
+.dockerignore

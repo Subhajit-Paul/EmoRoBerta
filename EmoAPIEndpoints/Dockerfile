@@ -6,4 +6,4 @@ RUN python3 -m pip install --upgrade -r /APIEndpoints/requirements.txt
 
 COPY . /APIEndpoints/API
 EXPOSE 8000
-CMD ["uvicorn", "API.emoapi:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "API.EmoAPI:app", "--host", "0.0.0.0", "--port", "8000"]

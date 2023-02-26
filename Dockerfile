@@ -1,7 +1,6 @@
 FROM python:3.10
 
 COPY ./requirements.txt ./requirements.txt
-RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install --upgrade -r requirements.txt
 COPY . ./emoapiendpoints
 EXPOSE 8000
